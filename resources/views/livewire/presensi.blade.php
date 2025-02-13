@@ -90,7 +90,7 @@
                         component.set('latitude', lat);
                         component.set('longitude', lon);
                     } else {
-                        if ({{ $schedule->is_wfa }}) {
+                        if ('{{ $schedule->is_wfa }}') {
                             component.set('insideRadius', true);
                             component.set('latitude', lat);
                             component.set('longitude', lon);
