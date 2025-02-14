@@ -8,4 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        hmr: {
+            host: 'filament-presensi-production.up.railway.app',
+            protocol: 'wss',
+        },
+    },
 });
