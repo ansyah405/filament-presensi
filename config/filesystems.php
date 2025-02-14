@@ -73,11 +73,11 @@ return [
     |
     */
 
-    // 'links' => [
-    //     public_path('storage') => storage_path('app/public'),
-    // ],
     'links' => [
-        base_path('public_html/storage') => storage_path('app/public'),
+        public_path('storage') => storage_path('app/public'),
     ],
+    // 'links' => [
+    //     base_path('public_html/storage') => storage_path('app/public'),
+    // ],
 
 ];
