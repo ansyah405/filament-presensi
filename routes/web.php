@@ -2,11 +2,15 @@
 
 use App\Exports\AttendanceExport;
 use App\Livewire\Presensi;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Facades\Excel;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/symlink', function () {
+    Artisan::call('storage:link');
 });
 
 Route::get('/login', function(){
