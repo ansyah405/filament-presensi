@@ -1,6 +1,0 @@
-[phases.setup]
-commands = ["composer install", "npm install"]
-
-[phases.build]
-commands = ["npm run build"]
-
