@@ -13,6 +13,11 @@ Route::get('/symlink', function () {
     Artisan::call('storage:link');
 });
 
+Route::get('/debug-headers', function () {
+    return response()->json(request()->headers->all());
+});
+
+
 Route::get('/login', function(){
     return redirect('admin/login');
 })->name('login');
