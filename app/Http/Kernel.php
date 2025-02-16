@@ -26,6 +26,7 @@ class Kernel extends HttpKernel
     protected $middlewareGroups = [
         'web' => [
             \App\Http\Middleware\VerifyCsrfToken::class,
+            \App\Http\Middleware\TrustProxies::class,
             // Middleware lain...
         ],
     ];
