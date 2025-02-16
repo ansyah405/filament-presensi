@@ -10,7 +10,12 @@ class TrustProxies
 {
 
     protected $proxies = '*';
-    protected $headers = Request::HEADER_X_FORWARDED_ALL;
+    protected $headers = 
+    \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR |
+    \Illuminate\Http\Request::HEADER_X_FORWARDED_HOST |
+    \Illuminate\Http\Request::HEADER_X_FORWARDED_PORT |
+    \Illuminate\Http\Request::HEADER_X_FORWARDED_PROTO;
+
     /**
      * Handle an incoming request.
      *
